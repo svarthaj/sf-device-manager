@@ -69,6 +69,11 @@
  */
 // (window as any).__Zone_enable_cross_context_check = true;
 
+/*
+ * Dragula workaround
+*/
+(window as any).global = window;
+
 /***************************************************************************************************
  * Zone JS is required by default for Angular itself.
  */

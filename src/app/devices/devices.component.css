@@ -1,0 +1,85 @@
+/* DevicesComponent's private CSS styles */
+.selected {
+  background-color: #CFD8DC !important;
+  color: white;
+}
+.devices {
+  display: block;
+  margin: 0 0 2em 0;
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+}
+.devices li {
+  cursor: pointer;
+  position: relative;
+  left: 0;
+  text-align: center;
+  background-color: #EEE;
+  margin: .5em;
+  padding: 0 0;
+  height: 1.6em;
+  border-radius: 4px;
+}
+.devices li.selected:hover {
+  background-color: #BBD8DC !important;
+  color: white;
+}
+.devices li:hover {
+  color: #607D8B;
+  background-color: #DDD;
+  left: .1em;
+}
+.devices .text {
+  position: relative;
+  top: 0;
+}
+.devices .badge {
+  display: inline-block;
+  font-size: small;
+  color: white;
+  padding: 0.8em 0.7em 0.8em 0.7em;
+  background-color: #607D8B;
+  line-height: 0;
+  position: relative;
+  left: -1px;
+  top: -3px;
+  height: 1.9em;
+  margin-right: .8em;
+  border-radius: 4px 0 0 4px;
+}
+label {
+  display: inline;
+  width: 3em;
+  margin: .5em 0;
+  color: #607D8B;
+  font-weight: bold;
+}
+button {
+  margin-top: 20px;
+  font-family: Arial;
+  background-color: #eee;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer; cursor: hand;
+}
+button:hover {
+  background-color: #cfd8dc;
+}
+button.delete {
+  margin-top: 0;
+  padding: 0 5px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  cursor: hand;
+  font-family: Arial;
+  top: 0;
+  right: 0;
+  background-color: gray !important;
+  color: white;
+}

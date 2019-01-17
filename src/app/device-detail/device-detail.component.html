@@ -1,0 +1,27 @@
+<div *ngIf="device">
+  <h2>{{device.name}} Details</h2>
+  <div>
+    <label>name:</label>
+      <p><input [(ngModel)]="device.name" placeholder="Name" maxlength="13"></p>
+  <div>
+    <label>description:</label>
+      <p><input [(ngModel)]="device.description" placeholder="Description"></p>
+  </div>
+  <div>
+    <label>model:</label>
+      <p><select [(ngModel)]="device.model">
+        <option value="Arduino Uno">Arduino Uno</option>
+        <option value="Raspberry Pi">Raspberry Pi</option>
+        <option value="Intel Galileo">Intel Galileo</option>
+      </select></p>
+  </div>
+
+  <div *ngIf="device.isFresh; else notFresh">
+    <button mat-button (click)="save()">Save</button>
+  </div>
+  <ng-template #notFresh>
+    <div>
+      <button mat-button (click)="update()">Update</button>
+    </div>
+  </ng-template>
+</div>
