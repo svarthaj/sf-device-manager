@@ -8,24 +8,31 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-This project is developed using Angular (*not AngularJS*) and follows the Angular file system. Since Angular is based on Node.js, we use NPM for package managing.
+This project is developed using Angular (*not AngularJS*) and follows the Angular file system. Since Angular is based on Node.js, we use NPM for package managing.  To install Node and its package manager run
 
 ```
-cmd for installing node
+curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
+sudo apt-get install -y nodejs
 ```
 
 To get it up and running you need to install the following dependencies using NPM.
 
 ```
-npm cmd for installing all dependencies
+sudo npm install -g @angular/cli @angular-devkit/build-angular @angular/core
+```
+
+The last step is to set the MongoDB Replica Set used for data storage. First you need to install MongoDB. On Ubuntu, the best option is to install the package maintained by MongoDB Inc. itself. This can be easily done following their [tutorial page](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/). After all is done, you can deploy the database with
+
+```
+sudo mongod --port 27017 --dbpath /var/lib/mongodb/ --replSet rs0
 ```
 
 ### Installing
 
-Theres is no installation. You get the files updated and run your server with
+There is no installation. To get the server running you must first deploy the MongoDB as mentioned before and then run the command below inside the project main directory
 
 ```
-command for putting your server live
+npm run build
 ```
 
 ## Built With
