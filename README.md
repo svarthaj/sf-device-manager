@@ -21,10 +21,14 @@ To get it up and running you need to install the following dependencies using NP
 sudo npm install -g @angular/cli @angular-devkit/build-angular @angular/core
 ```
 
-The last step is to set the MongoDB Replica Set used for data storage. First you need to install MongoDB. On Ubuntu, the best option is to install the package maintained by MongoDB Inc. itself. This can be easily done following their [tutorial page](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/). After all is done, you can deploy the database with
-
+The last step is to set the MongoDB Replica Set used for data storage. First you need to install MongoDB. On Ubuntu, the best option is to install the package maintained by MongoDB Inc. itself. This can be easily done following their [tutorial page](https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/). After all is done, you need to create the directories for your DB. On Ubuntu running
 ```
-sudo mongod --port 27017 --dbpath /var/lib/mongodb/ --replSet rs0
+sudo mkdir -p /data/db /data/log
+```
+
+Finally you can deploy the database with
+```
+sudo mongod --replSet rs0
 ```
 
 ### Installing
