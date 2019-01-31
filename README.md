@@ -48,5 +48,5 @@ npm run build
 
 ## Authors
 
-* **Mathias Mormul** - *Project Leader* -
+* **Mathias Mormul** - *Project Leader* - [Mormulms](https://github.com/mormulms)
 * **Lucas Leal** - *Initial work* - [Svarthaj](https://github.com/Svarthaj)
